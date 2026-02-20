@@ -1,0 +1,94 @@
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-image: url(../assets/fondoInvitacion3.png);
+  background-size: contain;
+}
+/* #section1{
+  background-image: url(../assets/fondoInvitacion3.png);
+  background-size: contain;
+}
+#section2{
+  background-image: url(../assets/fondoInvitacion.png);
+  background-size: contain;
+}
+#section3{
+  background-image: url(../assets/fondoInvitacion.png);
+}
+#section4{
+  background-image: url(../assets/fondoInvitacion4.png);
+} */
+.div-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.section-invitacion{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100dvh;
+}
+
+.corona{
+    top: 5%;
+    left: 25%;
+    width:90%;
+}
+
+.nombreMakeila{
+    width:70%;
+}
+.rosas_izquierda{
+    position: absolute;
+    left: 0;
+    top:0;
+    width:70%;
+}
+.rosas_derecha{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+}
+
+@font-face {
+  font-family: "Invitacion";
+  src: url("/fonts/EdwardianScript.otf") format("opentype");
+}
+.letra_quince{
+  font-size: 34px;
+  color:rgb(47, 67,102);
+  text-align: center;
+  font-family:'Invitacion';
+  position: relative;
+  z-index: 9999;
+}
+
+
+.imgWrap{
+  position: relative;
+  width:80%;
+}
+
+.imgWrap img{
+  width:100%;
+  display:block;
+}
+
+.zona20{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:20%;
+  z-index:2;
+}
