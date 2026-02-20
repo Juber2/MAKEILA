@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/styleEfect.css" />
     <link rel="stylesheet" href="./css/mariposas.css" />
     <link rel="stylesheet" href="./css/contador.css" />
+    <link rel="stylesheet" href="./css/stylemusica.css" />
 
   </head>
 
@@ -29,10 +30,6 @@
 
     <!-- <img src="./assets/lazo.png" alt="Logo" class="floating-image" style="width: 20%;"/> -->
  
- <audio id="bgMusic" preload="auto" loop>
-                  <source src="./assets/musica.mp3" type="audio/mpeg">
-                </audio>
-
     <div style="display:flex">
       <img src="./assets/CortinaDerecha.png" alt="Logo" class="floating-image-derecha"/>
       <img src="./assets/cortinaIzquierda.png" alt="Logo" class="floating-image-izquierda"/> 
@@ -45,15 +42,53 @@
                <!-- <img src="./assets/rosas_derecha.png" alt="Logo" class="rosas_derecha"/>  -->
               <img src="./assets/corona.png" class="corona"/>
               <img src="./assets/mariposamovi.gif" class="mariposa" />
-             <!-- <div style="text-align: center;position: relative;">
-              <img src="./assets/nombreKatriel.png" class="nombreMakeila"/>
-              </div> -->
-              <!-- <img src="./assets/vestidoImage.png" style="width: 40%;margin-top:30px"/> -->
-                 
+              
+             <div class="audio-player" id="player">
+                <audio id="audio" preload="auto">
+                  <source src="./assets/musica.mp3" type="audio/mpeg" />
+                </audio>
 
-            </br>
+                <!-- Barra de progreso -->
+                <div class="progress-wrap">
+                  <input id="progress" class="progress" type="range" min="0" max="1000" value="0" />
+                </div>
+
+                <!-- Controles -->
+                <div class="controls">
+                  <button class="icon-btn" id="shuffle" aria-label="Shuffle" title="Shuffle">
+                    <!-- shuffle icon -->
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5h-2V6.41l-3.3 3.3a1 1 0 0 1-1.4 0L12 7.41 7.7 11.7a1 1 0 0 1-1.4 0L3 8.41 4.41 7l2.59 2.59L11.3 5.3a1 1 0 0 1 1.4 0l2.3 2.3L17.59 5H16V3Zm5 13v5h-5v-2h1.59l-3.3-3.3a1 1 0 0 1 0-1.4l.3-.3 1.41 1.41-.3.3L19 18.59V17h2Zm-18 1.59L4.41 16l2.59 2.59a1 1 0 0 0 1.4 0L12 15l1.59 1.59-2.3 2.3a3 3 0 0 1-4.24 0L3 17.59Z"/></svg>
+                  </button>
+
+                  <button class="icon-btn" id="prev" aria-label="Anterior" title="Anterior">
+                    <!-- prev icon -->
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h2v12H6V6Zm3.5 6 10-7v14l-10-7Z"/></svg>
+                  </button>
+
+                  <button class="play-btn" id="play" aria-label="Reproducir / Pausar" title="Play/Pause">
+                    <!-- play/pause icons (se alternan por JS) -->
+                    <svg id="icoPlay" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7L8 5Z"/></svg>
+                    <svg id="icoPause" viewBox="0 0 24 24" aria-hidden="true" style="display:none"><path d="M7 6h4v12H7V6Zm6 0h4v12h-4V6Z"/></svg>
+                  </button>
+
+                  <button class="icon-btn" id="next" aria-label="Siguiente" title="Siguiente">
+                    <!-- next icon -->
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 6h2v12h-2V6ZM5 19V5l10 7-10 7Z"/></svg>
+                  </button>
+
+                  <button class="icon-btn" id="repeat" aria-label="Repetir" title="Repetir">
+                    <!-- repeat icon -->
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h11l-1.5-1.5L18 4l4 4-4 4-1.5-1.5L18 9H7v4H5V7a2 2 0 0 1 2-2Zm10 10H6l1.5 1.5L6 20l-4-4 4-4 1.5 1.5L6 15h11v-4h2v6a2 2 0 0 1-2 2Z"/></svg>
+                  </button>
+                </div>
+              </div>
+              <br />
           </section> 
           <section id="section2" class="section-invitacion" >
+              <br />
+              <br />
+              <br />
+              <br />
               <img src="./assets/separador2.png" style="width:90%;margin-top:-30px"/>
               <br />
               <div style="padding: 0px 30px;">
@@ -66,22 +101,19 @@
               </p>
               </div>
             </br>
-            </br>
               <img src="./assets/separador2.png" style="width:90%;"/>
             </br>
             </br>
               <img src="./assets/padresMakeila.png" style="width: 100%;"/>
             </br>
-            </br>
               <p class="letra_quince" style="font-size: 20px;">
                 Tienen el gusto de invitarle a celebrar los 15 años de su hija el dia.
               </p>
-            </br>
 
+            </br>
           </section>
           <section id="section3" class="section-invitacion" >
               <img src="./assets/fechaKince.png" style="width: 90%;"/>
-            </br>
             </br>
               <img src="./assets/Calendario.png" style="width: 80%;"/>
             </br>
@@ -120,13 +152,13 @@
               <img src="./assets/separador2.png" style="width:90%;"/>
             </br>
           <div class="imgWrap">
-  <img src="./assets/lugaryhora.png" />
-  <a
-    class="zona20"
-    href="https://www.google.com/maps?q=-12.000925064086914,-77.0406494140625&z=17&hl=es"
-    target="_blank">
-  </a>
-</div>
+            <img src="./assets/lugaryhora.png" />
+            <a
+              class="zona20"
+              href="https://www.google.com/maps?q=-12.000925064086914,-77.0406494140625&z=17&hl=es"
+              target="_blank">
+            </a>
+          </div>
             </br>
               <img src="./assets/separador2.png" style="width:90%;"/>
             </br>
@@ -144,5 +176,6 @@
     </main>
 
     <script src="./js/script.js"></script>
+    <script src="./js/scriptMusica.js"></script>
   </body>
 </html>

@@ -32,14 +32,21 @@
     setTimeout(loop, 1000 - (Date.now() % 1000));
   })();
 
+const trigger = document.getElementById("musicTrigger");
 const music = document.getElementById("bgMusic");
 
-/* se activa en el primer toque del usuario */
-document.addEventListener("click", () => {
-  console.log("Reproduciendo música...");
-  music.volume = 0.4; // volumen (0 a 1)
-  music.play();
-}, { once: true });
+trigger.addEventListener("click", async () => {
+
+  if (music.paused) {
+    await music.play();
+    trigger.textContent = "⏸ Pausar música";
+  } else {
+    music.pause();
+    trigger.textContent = "🎵 Reproducir música";
+  }
+
+});
+
 })();
 
 (() => {
