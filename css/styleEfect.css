@@ -2,27 +2,26 @@
 
 .floating-image-izquierda{
   position: fixed;
-  top: 50%;
-  left:30%;
-  width: 60%;
-  z-index: 9998;
+  width: 50%;
+  height: 100%;
+  z-index: 9999;
   pointer-events: none;
-  transform: translate(-10%, -30%);
+  /* transform: translate(-10%, -30%); */
   opacity: 1;
   animation: izquierda 3.2s ease-in-out forwards;
-  animation-delay: 0.1s;
+  animation-delay: 0.1s; 
 }
 .floating-image-derecha{
   position: fixed;
-  top: 50%;
-  left: 70%;
-  width: 60%;
-  z-index: 9998;
+  width:50%;
+  left: 49.9%;
+  height: 100%;
+  z-index: 9999;
   pointer-events: none;
-  transform: translate(-10%, -30%);
+  /* transform: translate(-10%, -30%); */
   opacity: 1;
   animation: derecha 3.2s ease-in-out forwards;
-  animation-delay: 0.1s;
+  animation-delay: 0.1s; 
 }
 .floating-image{
   position: fixed;
@@ -42,31 +41,36 @@
   /* opcional: delay para que “se vea” antes de caer */
   animation-delay: 0.1s;
 }
-@keyframes derecha{
+
+@keyframes derecha {
   0%{
-    transform: translate(-50%, -50%);
+    transform: translateX(0);
     opacity: 1;
   }
+
   30%{
-    transform: translate(-50%, -50%);
+    transform: translateX(0);
     opacity: 1;
   }
+
   100%{
-    transform: translate(120vh, 0vh); /* baja y sale */
+    transform: translateX(120vw); /* sale hacia la derecha */
     opacity: 0;
   }
 }
-@keyframes izquierda{
+@keyframes izquierda {
   0%{
-    transform: translate(-50%, -50%);
+    transform: translateX(0);
     opacity: 1;
   }
+
   30%{
-    transform: translate(-50%, -50%);
+    transform: translateX(0);
     opacity: 1;
   }
+
   100%{
-    transform: translate(-120vh, 0vh); /* baja y sale */
+    transform: translateX(-120vw); /* sale hacia la izquierda */
     opacity: 0;
   }
 }

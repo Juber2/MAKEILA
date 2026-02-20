@@ -32,6 +32,14 @@
     setTimeout(loop, 1000 - (Date.now() % 1000));
   })();
 
+const music = document.getElementById("bgMusic");
+
+/* se activa en el primer toque del usuario */
+document.addEventListener("click", () => {
+  console.log("Reproduciendo música...");
+  music.volume = 0.4; // volumen (0 a 1)
+  music.play();
+}, { once: true });
 })();
 
 (() => {
@@ -94,4 +102,3 @@
   if (img.complete) init();
   else img.addEventListener('load', init, { once: true });
 })();
-
