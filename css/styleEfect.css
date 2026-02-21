@@ -2,6 +2,7 @@
 
 .floating-image-izquierda{
   position: fixed;
+  left:0;
   width: 50%;
   height: 100%;
   z-index: 9999;

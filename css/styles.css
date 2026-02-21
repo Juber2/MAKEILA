@@ -1,15 +1,13 @@
-/* ===== RESET BÁSICO ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 body {
   font-family: system-ui, Arial, sans-serif;
   line-height: 1.5;
   color: #222;
   background-image: url(../assets/fondoInvitacion3.png);
   background-size: contain;
+  max-width: 800px;
+  position: relative;
+  margin: 0 auto;  
 }
 /* #section1{
   background-image: url(../assets/fondoInvitacion3.png);
@@ -25,6 +23,17 @@ body {
 #section4{
   background-image: url(../assets/fondoInvitacion4.png);
 } */
+#section2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}#section1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .div-section{
   display: flex;
   flex-direction: column;
@@ -35,14 +44,14 @@ body {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: 100dvh;
+}
+.section-invitacion2{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
-.corona{
-    top: 5%;
-    left: 25%;
-    width:90%;
-}
 
 .nombreMakeila{
     width:70%;

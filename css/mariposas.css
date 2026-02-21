@@ -86,7 +86,7 @@
 }
  
 .mariposa{
-  position: fixed;
+  position: absolute;
   width: 40%;
   top: -10vh;
   left: -10vw;
