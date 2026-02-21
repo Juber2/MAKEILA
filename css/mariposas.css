@@ -86,8 +86,9 @@
 }
  
 .mariposa{
-  position: absolute;
-  width: 40%;
+  position: fixed;
+  z-index: 9999;
+  width: 170px;
   top: -10vh;
   left: -10vw;
   animation: vueloDiagonal 35s ease-in-out infinite;
@@ -99,10 +100,10 @@
   0%   { transform: translate(0,0) scaleX(1); }
 
   /* llega abajo */
-  48%  { transform: translate(110vw,110vh) scaleX(1); }
+  48%  { transform: translate(100vw,100vh) scaleX(1); }
 
   /* da la vuelta (espejo) */
-  52%  { transform: translate(110vw,110vh) scaleX(-1); }
+  52%  { transform: translate(100vw,100vh) scaleX(-1); }
 
   /* regresa hacia arriba-izquierda */
   100% { transform: translate(0,0) scaleX(-1); }
